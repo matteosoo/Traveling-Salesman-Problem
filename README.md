@@ -16,7 +16,7 @@
     ```
 
 ## TODO List
-- [ ] 讀檔的start time？
+- [x] 讀檔的start time？
 - [ ] Time取到第幾位數？
 - [ ] 合併BF和BB的code
 - [ ] 上交作業的測資input.txt寫死(路徑會和執行檔相同, 檔名即“input.txt”)
@@ -24,5 +24,8 @@
 - [ ] 生出測資(n:5-15,cost:0-99)並完成表格
 
 ## References
-- brute_force: https://www.geeksforgeeks.org/traveling-salesman-problem-tsp-implementation/
-- branch_and_bound: https://www.geeksforgeeks.org/traveling-salesman-problem-using-branch-and-bound-2/
+- brute_force: 
+    - https://www.geeksforgeeks.org/traveling-salesman-problem-tsp-implementation/
+- branch_and_bound: 
+    - https://www.techiedelight.com/travelling-salesman-problem-using-branch-and-bound/
+    - https://www.geeksforgeeks.org/traveling-salesman-problem-using-branch-and-bound-2/ commit:[f9f748d](https://github.com/matteosoo/Traveling-Salesman-Problem/commit/f9f748d83dd23239edcc116c665ea402cf24d28f)

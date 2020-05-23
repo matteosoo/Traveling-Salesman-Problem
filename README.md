@@ -14,7 +14,7 @@
     $ ./brute_force.exe data/n=5.txt
     $ ./branch_and_bound.exe data/n=5.txt
     ```
-- (Optional) 新增test data(n=5~15, cost範圍0~99, -1為∞)
+- (Optional) 新增test data(n=5\~15, cost範圍0\~99, -1為∞)
     ```
     $ python data_generation
     ```
@@ -55,4 +55,4 @@
     - https://www.geeksforgeeks.org/traveling-salesman-problem-tsp-implementation/
 - branch_and_bound: 
     - https://www.techiedelight.com/travelling-salesman-problem-using-branch-and-bound/
-- https://www.geeksforgeeks.org/traveling-salesman-problem-using-branch-and-bound-2/ commit:[f9f748d](https://github.com/matteosoo/Traveling-Salesman-Problem/commit/f9f748d83dd23239edcc116c665ea402cf24d28f)
+- ~https://www.geeksforgeeks.org/traveling-salesman-problem-using-branch-and-bound-2/~ Last commit:[f9f748d](https://github.com/matteosoo/Traveling-Salesman-Problem/commit/f9f748d83dd23239edcc116c665ea402cf24d28f)

@@ -43,12 +43,12 @@
 
 
 ## TODO List
-- [x] 讀檔的start time？
-- [x] Program Time取到第7位數
-- [ ] 合併BF和BB的code
-- [ ] 上交作業的測資input.txt寫死(路徑會和執行檔相同, 檔名即“input.txt”)
+- [x] 計算程式執行時間
+- [x] 執行時間round取小數點到第7位數
+- [x] 合併BF和BB的code
+- [x] 上交作業的測資input.txt寫死(路徑會和執行檔相同, 檔名即“input.txt”)
 - [x] 出發點一律從 0 出發
-- [x] 生出測資(n:5-15,cost:0-99)並完成表格
+- [x] 生出測資(n:5-15,cost:0-99)完成表格
 
 ## References
 - brute_force: 

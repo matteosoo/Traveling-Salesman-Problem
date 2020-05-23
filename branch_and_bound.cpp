@@ -8,6 +8,7 @@
 #include <climits>
 #include <chrono> 
 #include <fstream>
+#include <iomanip>
 using namespace std::chrono;
 using namespace std;
 
@@ -261,16 +262,17 @@ int main(int argc, char* argv[])
 	auto start = high_resolution_clock::now();
 	int cost = solve(costMatrix);
 	auto stop = high_resolution_clock::now();
-	auto duration = duration_cast<microseconds>(stop - start);
+	auto duration = duration_cast<nanoseconds>(stop - start);
 	
 	// write file to BB.txt
-    ofstream output_file("BB.txt");
+    std::ofstream output_file("BB.txt");
     output_file << "Solution : " ; 
     for (int i = 0; i < solution_list.size(); i++) 
         output_file << solution_list[i] << " - "; 
     output_file << "0" << endl;
-	output_file << "Cost     : " << cost << endl; 
-	output_file << "Time     : " << (duration.count())/(1e+6) << " s" << endl;
+	output_file << "Cost     : " << cost << endl;
+	float time = (duration.count())/(1e+9);
+	output_file << "Time     : " << std::fixed << std::setprecision(7) << time << " s" << endl;
     output_file.close(); 
 
 	return 0;

@@ -1,20 +1,24 @@
 # Traveling-Salesman-Problem (TSP)
 
 ## How to use?
-1. 使用g++編譯, 於macOS測試
-2. 需要安裝萬用標頭 <bits/stdc++.h> 
-    - 參考自: https://stackoverflow.com/questions/28994148/how-can-i-include-bits-stdc-in-xcode
-3. 編譯C++程式
+1. enviroments
+    - c++ compile with g++
+    - test on macOS Catalina 10.15.4 
+    - c++11 standard
+2. <bits/stdc++.h> 
+    - An implementation file for a precompiled header.
+    - Install reference on macOS: https://stackoverflow.com/questions/28994148/how-can-i-include-bits-stdc-in-xcode
+3. compile
     ```
     $ g++ -std=c++11 -o brute_force.exe brute_force.cpp
     $ g++ -std=c++11 -o branch_and_bound.exe branch_and_bound.cpp
     ```
-4. 執行編譯好的程式
+4. execution
     ```
     $ ./brute_force.exe data/n=5.txt
     $ ./branch_and_bound.exe data/n=5.txt
     ```
-- (Optional) 新增test data(n=5\~15, cost範圍0\~99, -1為∞)
+- (Optional) augment test data(n range: 5\~15, cost range:0\~99, -1 repesent ∞)
     ```
     $ python data_generation
     ```
@@ -43,16 +47,16 @@
 
 
 ## TODO List
-- [x] 計算程式執行時間
-- [x] 執行時間round取小數點到第7位數
-- [x] 合併BF和BB的code
-- [x] 上交作業的測資input.txt寫死(路徑會和執行檔相同, 檔名即“input.txt”)
-- [x] 出發點一律從 0 出發
-- [x] 生出測資(n:5-15,cost:0-99)完成表格
+- [x] caculate the running time  of this program
+- [x] running time round to 7th decimal place
+- [x] merge the code (BF and BB)
+- [x] change the path of "input.txt"(same path with .exe)
+- [x] initial point alway starts from 0
+- [x] complete a program to generate some random testing data. Also, fill up the tabel.(time.xlsx)
 
 ## References
 - brute_force: 
     - https://www.geeksforgeeks.org/traveling-salesman-problem-tsp-implementation/
 - branch_and_bound: 
     - https://www.techiedelight.com/travelling-salesman-problem-using-branch-and-bound/
-- ~https://www.geeksforgeeks.org/traveling-salesman-problem-using-branch-and-bound-2/~ Last commit:[f9f748d](https://github.com/matteosoo/Traveling-Salesman-Problem/commit/f9f748d83dd23239edcc116c665ea402cf24d28f)
+    - ~https://www.geeksforgeeks.org/traveling-salesman-problem-using-branch-and-bound-2/~ Last commit:[f9f748d](https://github.com/matteosoo/Traveling-Salesman-Problem/commit/f9f748d83dd23239edcc116c665ea402cf24d28f)

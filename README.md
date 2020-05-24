@@ -26,7 +26,22 @@
     
 ## Experiments results
 
+- After fininishing above steps, you will get "BF.txt" and "BB.txt" which represent the result of brute force and branch & bound method respectively.
+    - preview "BF.txt"
+        ```
+        Solution : 0 - 1 - 8 - 9 - 7 - 3 - 2 - 5 - 6 - 4 - 0
+        Cost     : 182
+        Time     : 0.2239894 s
+        ```
+     - preview "BB.txt"
+        ```
+        Solution : 0 - 1 - 8 - 9 - 7 - 3 - 2 - 5 - 6 - 4 - 0
+        Cost     : 182
+        Time     : 0.1036120 s
+        ```
+
 - Brute Force method with MacBook Pro with 2.4 GHz Quad-Core Intel Core i5
+    - Time complexity: O(n!) (NP-hard!)
  
 | Brute Force | n=5         | n=6         | n=7         | n=8         | n=9         | n=10        | n=11        | n=12         | n=13          | n=14    | n=15    |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ------------ | ------------- | ------- | ------- |
@@ -35,7 +50,8 @@
 | case 3      | 0.0000283 s | 0.0000882 s | 0.0006351 s | 0.0044859 s | 0.0319539 s | 0.2293398 s | 2.4864314 s | 28.3131065 s | 344.7347412 s | >900  s | >900  s |
 |  Average           |      0.0000239 s       |        0.0000883 s     |      0.0005794 s       |  0.0040755 s           |    0.0307964 s         |  0.2420882 s           |    2.4380784 s         |  27.8453846 s            |   348.8494873 s            |   >900 s      |    >900 s     |
 
-- Brach & Bound method with MacBook Pro with 2.4 GHz Quad-Core Intel Core i5
+- Branch & Bound method with MacBook Pro with 2.4 GHz Quad-Core Intel Core i5
+    - Time complexity: The worst case complexity of Branch and Bound remains same as that of the Brute Force clearly because in worst case, we may never get a chance to prune a node. Whereas, in practice it performs very well depending on the different instance of the TSP. The complexity also depends on the choice of the bounding function as they are the ones deciding how many nodes to be pruned.
 
 | Branch & Bound | n=5 | n=6  | n=7 | n=8 | n=9 | n=10 | n=11 | n=12 | n=13 | n=14 | n=15 |
 | ----------- | --- | ---- | --- | --- | --- | ---- | ---- | ---- | ---- | ---- | ---- |

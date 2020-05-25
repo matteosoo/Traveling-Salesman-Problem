@@ -265,15 +265,15 @@ int main(int argc, char* argv[])
 	auto duration = duration_cast<nanoseconds>(stop - start);
 	
 	// write file to BB.txt
-    std::ofstream output_file("BB.txt");
-    output_file << "Solution : " ; 
-    for (int i = 0; i < solution_list.size(); i++) 
-        output_file << solution_list[i] << " - "; 
-    output_file << "0" << endl;
+	std::ofstream output_file("BB.txt");
+	output_file << "Solution : " ; 
+	for (int i = 0; i < solution_list.size(); i++) 
+	output_file << solution_list[i] << " - "; 
+	output_file << "0" << endl;
 	output_file << "Cost     : " << cost << endl;
 	float time = (duration.count())/(1e+9);
 	output_file << "Time     : " << std::fixed << std::setprecision(7) << time << " s" << endl;
-    output_file.close(); 
+	output_file.close(); 
 
 	return 0;
 }

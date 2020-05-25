@@ -24,7 +24,7 @@
     ```
 
     
-## Experiments results
+## Experimental results
 
 - After fininishing above steps, you will get "BF.txt" and "BB.txt" which represent the result of brute force and branch & bound method respectively.
     - preview "BF.txt"

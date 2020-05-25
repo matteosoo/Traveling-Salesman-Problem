@@ -15,7 +15,7 @@ vector<int> bf_solution_list;
 // implementation of traveling Salesman Problem 
 int travllingSalesmanProblem(vector<vector<int>>& graph, int n, int s) 
 { 
-    vector<int> possible_solution_list; 
+	vector<int> possible_solution_list; 
 
 	// store all vertex apart from source vertex 
 	vector<int> vertex; 
@@ -30,15 +30,15 @@ int travllingSalesmanProblem(vector<vector<int>>& graph, int n, int s)
 		// store current Path weight(cost) 
 		int current_pathweight = 0; 
 
-        // reset the possible solution list
-        possible_solution_list.erase(possible_solution_list.begin(), possible_solution_list.end());
+		// reset the possible solution list
+		possible_solution_list.erase(possible_solution_list.begin(), possible_solution_list.end());
 		
 		// compute current path weight 
 		int k = s; 
 		for (int i = 0; i < vertex.size(); i++) { 
 			current_pathweight += graph[k][vertex[i]]; 
 			k = vertex[i];
-            possible_solution_list.push_back(k);
+            		possible_solution_list.push_back(k);
 		} 
 		current_pathweight += graph[k][s]; 
 
@@ -46,8 +46,8 @@ int travllingSalesmanProblem(vector<vector<int>>& graph, int n, int s)
             bf_solution_list.erase(bf_solution_list.begin(), bf_solution_list.end());
             for (int i = 0; i < possible_solution_list.size(); i++) {
                 bf_solution_list.push_back(possible_solution_list[i]);
+            	}
             }
-        }
 
 		// update minimum 
 		min_path = min(min_path, current_pathweight); 
@@ -305,21 +305,21 @@ int main()
 	
 	// brute force method
 	int s = 0; 
-    auto bf_start = high_resolution_clock::now();
+    	auto bf_start = high_resolution_clock::now();
 	int bf_cost = travllingSalesmanProblem(graph, n, s);
 	auto bf_stop = high_resolution_clock::now();
 	auto bf_duration = duration_cast<nanoseconds>(bf_stop - bf_start);
 
-    // write file to BF.txt
-    ofstream bf_output_file("BF.txt");
-    bf_output_file << "Solution : 0 - " ; 
-    for (int i = 0; i < bf_solution_list.size(); i++) 
-        bf_output_file << bf_solution_list[i] << " - "; 
-    bf_output_file << "0" << endl;
+    	// write file to BF.txt
+    	ofstream bf_output_file("BF.txt");
+    	bf_output_file << "Solution : 0 - " ; 
+    	for (int i = 0; i < bf_solution_list.size(); i++) 
+        	bf_output_file << bf_solution_list[i] << " - "; 
+    	bf_output_file << "0" << endl;
 	bf_output_file << "Cost     : " << bf_cost << endl;
 	float bf_time = (bf_duration.count())/(1e+9); 
 	bf_output_file << "Time     : " << std::fixed << std::setprecision(7) << bf_time << " s" << endl;
-    bf_output_file.close(); 
+    	bf_output_file.close(); 
 
 	// branch & bound method
 	N = n;
@@ -329,15 +329,15 @@ int main()
 	auto bb_duration = duration_cast<nanoseconds>(bb_stop - bb_start);
 	
 	// write file to BB.txt
-    ofstream bb_output_file("BB.txt");
-    bb_output_file << "Solution : " ; 
-    for (int i = 0; i < bb_solution_list.size(); i++) 
-        bb_output_file << bb_solution_list[i] << " - "; 
-    bb_output_file << "0" << endl;
+    	ofstream bb_output_file("BB.txt");
+    	bb_output_file << "Solution : " ; 
+    	for (int i = 0; i < bb_solution_list.size(); i++) 
+        	bb_output_file << bb_solution_list[i] << " - "; 
+    	bb_output_file << "0" << endl;
 	bb_output_file << "Cost     : " << bb_cost << endl;
 	float bb_time = (bb_duration.count())/(1e+9);
 	bb_output_file << "Time     : " << std::fixed << std::setprecision(7) << bb_time << " s" << endl;
-    bb_output_file.close(); 
+    	bb_output_file.close(); 
 
 	return 0; 
 }

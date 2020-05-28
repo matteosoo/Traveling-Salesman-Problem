@@ -1,7 +1,7 @@
 # Traveling-Salesman-Problem (TSP)
 
 ## How to use?
-1. enviroments
+1. environments
     - c++ compile with g++
     - test on macOS Catalina 10.15.4 
     - c++11 standard
@@ -76,3 +76,5 @@
 - branch_and_bound: 
     - https://www.techiedelight.com/travelling-salesman-problem-using-branch-and-bound/
     - ~https://www.geeksforgeeks.org/traveling-salesman-problem-using-branch-and-bound-2/~ Last commit:[f9f748d](https://github.com/matteosoo/Traveling-Salesman-Problem/commit/f9f748d83dd23239edcc116c665ea402cf24d28f)
+
+###### tags: `Algorithm`
